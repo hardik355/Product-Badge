@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: postgres
+
+
+development:
+  <<: *default
+  database: product-badge-development
+
+test:
+  <<: *default
+  database: product-badge-test
+
+production:
+  <<: *default
+  database: product-badge-production
