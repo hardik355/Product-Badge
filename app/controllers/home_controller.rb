@@ -6,7 +6,10 @@ class HomeController < AuthenticatedController
   # include ShopifyApp::ShopAccessScopesVerification
 
   def index
-    @shop_origin = current_shopify_domain
-    @host = params[:host]
+    p 333333333333333333333333333333
+    p shop
+    # @shop_origin = current_shopify_domain
+    # @host = params[:host]
+    p 333333333333333333333333333333
   end
 end

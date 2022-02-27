@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <% application_name = ShopifyApp.configuration.application_name %>
     <title><%= application_name %></title>
+    
     <%= stylesheet_link_tag 'application' %>
+
+    
     <% if ShopifyApp.use_webpacker? %>
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <% elsif ShopifyApp.use_importmap? %>
@@ -13,13 +16,23 @@
       <%= javascript_include_tag 'application', "data-turbolinks-track" => true %>
     <% end %>
     <%= csrf_meta_tags %>
+
+    
+    <link rel="stylesheet" href="https://unpkg.com/@shopify/polaris@4.25.0/styles.min.css"/>
+    <link rel="stylesheet" <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">>
+
   </head>
 
   <body>
     <div class="app-wrapper">
       <div class="app-content">
         <main role="main">
-          <%= yield %>
+          <div class="Polaris-Card">
+            <div class="main-section">
+              <%= render partial: 'layouts/nav_bar'%>
+              <%#= yield %>
+            </div>
+          </div>
         </main>
       </div>
     </div>

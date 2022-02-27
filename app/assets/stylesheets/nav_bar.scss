@@ -1,0 +1,140 @@
+.nav-menu-wrapper {
+    position: relative;
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+    }
+  
+    .nev-menu-inner {
+      background: #42467f;
+      position: relative;
+      z-index: 100;
+      box-shadow: 0 3px 9px 0 rgba(46,50,60,0.09);
+    }
+  
+    .nev-menu-list {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.875em;
+    }
+  
+    .nev-menu-list > li:first-child {
+      margin-left: 0;
+    }
+  
+    .nev-menu-list > li {
+      margin-left: 30px;
+      display: inline-block;
+    }
+  
+    .nev-menu-list > li > a {
+      color: #fff;
+      line-height: 3em;
+      display: inline-block;
+      position: relative;
+      z-index: 10000;
+      outline: none;
+      text-decoration: none;
+  
+      &.active {
+        border-bottom: 2px solid #ffffff;
+      }
+    }
+  }
+  
+  ul.nev-menu-list > li {
+      font-size: 15px;
+  }
+  
+  
+  .nev-menu-list > li:hover a {
+    transform: scale(1.1);
+  }
+  
+  .custom-nav-dropdown{
+    ul{
+      display: none;
+      background: #ffffff;
+      border: #00000070 1px solid;
+      padding: 0px;
+      border-top: none;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      position: absolute;
+      left: 20px;
+      padding-right: 10px;
+  
+      li{
+        a {
+          text-decoration: none;
+          color: #212b36;
+        }
+        padding: 6px;
+        margin-left: 4px;
+  
+        &:hover{
+          background: #6c72bff2;
+          transform: scale(1.2);
+          a{
+            color: #fff;
+          }
+        }
+      }
+    }
+    &:hover{
+      ul{display: block;}
+    }
+  }
+  
+  
+  .nev-menu-list > li:hover a {
+    transform: scale(1.1);
+  }
+  
+  .dynamic-nav{
+    ul{
+      display: none;
+      position: absolute;
+      background: #ffffff;
+      border: #00000070 1px solid;
+      padding: 0px;
+      border-top: none;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+  
+      li{
+        a {
+          text-decoration: none;
+          color: #212b36;
+        }
+        padding: 0px 40px;
+        line-height: 30px;
+        
+        &:hover{
+          background: #6c72bff2;
+          transform: scale(1.1.1);
+          a{
+            color: #fff;
+          }
+        }
+      }
+    }
+    &:hover{
+      ul{display: block;}
+    }
+  }
+  
+  
+  span.list-d {
+    padding-left: 16px;
+  }
+  
+  span.bundle-create-n {
+    padding-left: 11px;
+  }
+  
+  span.review-link{
+    padding-left: 11px;
+  }
