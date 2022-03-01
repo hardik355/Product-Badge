@@ -19,8 +19,7 @@
 
     
     <link rel="stylesheet" href="https://unpkg.com/@shopify/polaris@4.25.0/styles.min.css"/>
-    <link rel="stylesheet" <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">>
-
+    <link rel="stylesheet" <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
   </head>
 
   <body>
@@ -30,7 +29,11 @@
           <div class="Polaris-Card">
             <div class="main-section">
               <%= render partial: 'layouts/nav_bar'%>
-              <%#= yield %>
+               <div class="product-badge-main" id="ProductBadgeContent">
+                <div class="Polaris-Card__Section">
+            			<%= yield %>
+            		</div>
+              </div>
             </div>
           </div>
         </main>
