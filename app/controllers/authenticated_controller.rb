@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 class AuthenticatedController < ApplicationController
-  # include ShopifyApp::Authenticated
-  include ShopifyApp::EmbeddedApp
-  include ShopifyApp::RequireKnownShop
-  include ShopifyApp::ShopAccessScopesVerification
+  include ShopifyApp::Authenticated
+  # include ShopifyApp::EmbeddedApp
+  # include ShopifyApp::RequireKnownShop
+  # include ShopifyApp::ShopAccessScopesVerification
 
   helper_method :shop, :shop_domain
 
