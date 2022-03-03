@@ -1,0 +1,46 @@
+<div class="plan-main">
+	<h1 class="demo-title">
+	  CSS3 Pricing Table
+	</h1><br>
+	<div class="pricing-table">
+
+		<% Plan.all.each do |plan| %>
+		  <div class="ptable-item">
+		    <div class="ptable-single">
+		      <div class="ptable-header">
+		        <div class="ptable-title">
+		          <h2><%= plan.title %></h2>
+		        </div>
+		        <div class="ptable-price">
+		          <h2><small>$</small><%= plan.price.to_f %><span>/ M</span></h2>
+		        </div>
+		      </div>
+		      <div class="ptable-body">
+		        <div class="ptable-description">
+		        	<% plan.descriptions.split(',').each do |line| %>
+                <div class="plan-description">
+                  <i class="fa fa-check-circle"></i>
+                  <div><%= line %></div>
+                  <br/>
+                </div>
+              <% end %><br/>
+		        </div>
+		      </div>
+		      <div class="ptable-footer">
+		        <div class="ptable-action">
+		          <%= link_to 'Buy Now',
+                            # 'javascript:void(0)',
+                            user_plan_create_path(alias_name: plan.alias_name),
+                            class: "plan_btn",
+                            'data-shop-price' => shop.plan.present? ? shop.plan.price : '',
+                            'data-plan-price' => shop.plan.present? ? plan.price.to_f : '',
+                            'data-plan-name' => shop.plan.present? ? plan.alias_name : ''
+                            %>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+	  <% end %>
+
+	</div>
+</div>
