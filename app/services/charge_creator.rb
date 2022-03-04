@@ -3,7 +3,6 @@ class ChargeCreator
   APP_NAME = 'ProductBadge'
 
   def initialize(return_url, shop, plan)
-  	p 111111111111111111111111111111
     @return_url = return_url
     @shop = shop
     @plan = plan
@@ -22,7 +21,7 @@ class ChargeCreator
   end
 
   def trial_period
-    if ((@plan.title == 'Starter') || (@plan.title == 'Pro'))
+    if ((@plan.title == 'silver') || (@plan.title == 'gold') || (@plan.title == 'platinum'))
       free_15_day_trial_shop.include?(@shop.shopify_domain) ? 15 : 5
     else
       0
@@ -30,19 +29,11 @@ class ChargeCreator
   end
 
   def testing_domain
-    %w[essence-developer-3-da.myshopify.com
-       essence-developer-store.myshopify.com
-       essence-developer-2-ma.myshopify.com
-       essence-developer-5-ha.myshopify.com
-       essence-developer-4-an.myshopify.com
-       sachin-demo-store.myshopify.com
-       bundle-essence-demo-store.myshopify.com]
+    %w[essence-developer-5-ha.myshopify.com]
   end
 
   def free_15_day_trial_shop
-    %w[gabiano-na.myshopify.com
-       gabiano-us.myshopify.com
-       sachin-tagger-6sep.myshopify.com]
+    %w[essence-developer-5-ha.myshopify.com]
   end
   
 end
