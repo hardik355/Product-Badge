@@ -20,7 +20,8 @@
     <% if ShopifyApp.use_webpacker? %>
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <% else %>
-      <%= javascript_include_tag 'application', "data-turbolinks-track" => true %>
+     <%= javascript_importmap_tags %>
+      <%#= javascript_include_tag 'application', "data-turbolinks-track" => true %>
     <% end %>
     
     <%= csrf_meta_tags %>
