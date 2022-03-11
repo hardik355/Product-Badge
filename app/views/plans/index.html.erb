@@ -29,13 +29,12 @@
 		      <div class="ptable-footer">
 		        <div class="ptable-action">
 		          <%= link_to 'Buy Now',
-                            # 'javascript:void(0)',
-                            user_plan_create_path(alias_name: plan.alias_name),
-                            class: "plan_btn",
-                            'data-shop-price' => shop.plan.present? ? shop.plan.price : '',
-                            'data-plan-price' => shop.plan.present? ? plan.price.to_f : '',
-                            'data-plan-name' => shop.plan.present? ? plan.alias_name : ''
-                            %>
+                  user_plan_create_path(alias_name: plan.alias_name),
+                  class: "plan_btn",
+                  'data-shop-price' => shop.plan.present? ? shop.plan.price : '',
+                  'data-plan-price' => shop.plan.present? ? plan.price.to_f : '',
+                  'data-plan-name' => shop.plan.present? ? plan.alias_name : ''
+                  %>
 		        </div>
 		      </div>
 		    </div>
