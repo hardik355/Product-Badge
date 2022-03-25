@@ -75,3 +75,5 @@ end
 # Shopify app gem 
 gem 'shopify_app'
 
+# SIDEKIQ
+gem 'sidekiq'

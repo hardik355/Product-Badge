@@ -14,7 +14,7 @@ ShopifyApp.configure do |config|
   config.allow_jwt_authentication = true
   # config.allow_cookie_authentication = false
 
-  topics = %w[app/uninstalled]
+  topics = %w[orders/create app/uninstalled inventory_levels/update products/delete products/update]
   config.webhooks = topics.each_with_object([]) do |topic, a|
     options = {
       topic: topic,

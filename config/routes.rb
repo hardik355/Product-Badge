@@ -1,11 +1,21 @@
 Rails.application.routes.draw do
 
-  mount ShopifyApp::Engine, at: '/'
+  # Sidekiq
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 
-  root :to => 'home#index'
+
+  mount ShopifyApp::Engine, at: '/'
   
+  root :to => 'home#index'
+	
+	# CHARGE AND PLANS ROUTES  
   get :charges, to: 'charges#callback'
   get 'user/plans', to: 'plans#index'
   get 'user/plan_create', to: 'plans#create'
+
+
+  # post '/webhooks/uninstalled', :to => 'custom_webhooks#uninstalled'
+  # post '/webhooks/app_install', :to => ''
   
 end
