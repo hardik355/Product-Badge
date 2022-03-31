@@ -2,13 +2,14 @@
 
 class AuthenticatedController < ApplicationController
   include ShopifyApp::Authenticated
-
   helper_method :shop
 
-
   def shop
-    p 11111111111111111111111111111
-    p params
-    p 22222222222222222222222222
+    @shop ||= Shop.find_by(shopify_domain: shop_domain)
   end
+
+  def shop_domain
+    @shop_domain ||= shop_session.url
+  end
+
 end

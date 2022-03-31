@@ -1,0 +1,29 @@
+<div class="nav-menu">
+	<nav class="nav-menu-wrapper">
+  	<div class="nev-menu-inner">
+    	<ul class="nev-menu-list">
+
+				<li>
+        <i class="fa fa-home" aria-hidden="true"></i>
+					<%= link_to 'Home', root_path, class: "menu-link" %>            
+				</li>
+
+				<li>
+					<i class="fas fa-dollar-sign" aria-hidden="true"></i>
+					<%= link_to 'Plan', user_plans_path, class: "menu-link" %>  
+				</li>
+
+				<li>
+					<i class="fa fa-info-circle" aria-hidden="true"></i>
+					<%= link_to 'About', "javascript:void(0);", class: "menu-link" %>  
+				</li>
+				
+				<li>
+					<i class="fa fa-question-circle" aria-hidden="true"></i>
+					<%= link_to 'FAQ', "javascript:void(0);", class: "menu-link" %>
+				</li>
+
+    	</ul>
+  	</div>
+	</nav>
+</div>
